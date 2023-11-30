@@ -1,0 +1,10 @@
+<div class="container custom-container d-flex justify-content-center align-items-end flex-column">
+    <div><h5 class="text-white custom-h-margin">Селектирај алгоритам</h5></div>
+    <div>
+        <select class="form-select custom-margin" [(ngModel)]="selectedAlgorithm">
+             <option [ngValue]="algorithm.name" *ngFor="let algorithm of algorithms">{{algorithm.name}}</option>
+        </select>
+    </div>
+    <div class="whitespace"></div>
+    <div><button class="btn custom-btn" (click)="calculateProccessScheduling()">Пресметај</button></div>
+</div>
